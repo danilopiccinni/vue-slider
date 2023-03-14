@@ -32,6 +32,7 @@ createApp({
             ],
             
             indexActiveImage : 0,
+            scorriAuto : setInterval(this.nextSlide, 3000)
         }
     },
 
@@ -51,16 +52,17 @@ createApp({
                 this.indexActiveImage--
             }
         },
-
+        
         timeOutOn() {
-            timer = setTimeout(this.nextSlide , 3000)
+            this.scorriAuto = setInterval(this.nextSlide , 3000)
+        },
+        
+        timeOutOff() {
+            clearTimeout(this.scorriAuto)
         },
 
-        timeOutOff() {
-            clearTimeout(timer)
-        }
+    } ,
 
-    } 
 }).mount('#app')
     
 
