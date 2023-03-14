@@ -50,6 +50,10 @@ createApp({
             } else {
                 this.indexActiveImage--
             }
+        },
+
+        timeOut() {
+            setTimeout(this.nextSlide , 3000)
         }
     } 
 }).mount('#app')
