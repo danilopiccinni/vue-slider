@@ -14,12 +14,12 @@
 
     <div id="app">
 
-        {{ timeOut()}}
+        {{ timeOutOn()}}
 
-        <div class="container">
+        <div @mouseover="timeOutOff()" @mouseleave="timeOutOn()" class="container">
             <div class="slider-wrapper" tabindex="0">
 
-                <div class="item">
+                <div  class="item">
                     <img :src=slides[indexActiveImage].image alt="Spiderman" />
                     <div class="text">
                         <h3>

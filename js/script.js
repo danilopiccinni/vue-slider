@@ -52,9 +52,14 @@ createApp({
             }
         },
 
-        timeOut() {
-            setTimeout(this.nextSlide , 3000)
+        timeOutOn() {
+            timer = setTimeout(this.nextSlide , 3000)
+        },
+
+        timeOutOff() {
+            clearTimeout(timer)
         }
+
     } 
 }).mount('#app')
     
